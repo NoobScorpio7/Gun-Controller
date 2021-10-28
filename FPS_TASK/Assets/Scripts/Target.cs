@@ -2,29 +2,40 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Target : MonoBehaviour
-{
-    public int maxhealth = 50;
-    public int currhealth;
-    public Healthbar healthbar;
 
-    public void Start()
+
+
+    public class Target : MonoBehaviour
     {
-        currhealth = maxhealth;
-        healthbar.SetMaxHealth(maxhealth);
-    }
-    public void TakeDamage(int amount)
-    {
-        currhealth -= amount;
-        healthbar.SetHealth(currhealth);
-        if (currhealth <= 0)
+        public int maxhealth = 50;
+        public int currhealth;
+        public Healthbar healthbar;
+        public bool isdead = false;
+
+        public void Start()
         {
-            Die();
+            currhealth = maxhealth;
+            healthbar.SetMaxHealth(maxhealth);
+        }
+        public void TakeDamage(int amount)
+        {
+            currhealth -= amount;
+            healthbar.SetHealth(currhealth);
+            if (currhealth <= 0)
+            {
+                Die();
+            }
+        }
+
+        void Die()
+        {
+            isdead = true;
+            Destroy(gameObject);
+        }
+
+        public bool IsEnemyDead()
+        {
+            return isdead;
         }
     }
 
-    void Die()
-    {
-        Destroy(gameObject);
-    }
-}

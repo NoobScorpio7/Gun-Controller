@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class playGame : MonoBehaviour
 {
-    public float delay = 10;
+    public float delay = 5;
     // Start is called before the first frame update
     void Start()
     {

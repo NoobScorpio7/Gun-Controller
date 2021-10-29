@@ -21,7 +21,7 @@ public class playGame : MonoBehaviour
     IEnumerator LoadLevelAfterDelay(float delay)
     {
         yield return new WaitForSeconds(delay);
-        SceneManager.LoadScene(4);
+        SceneManager.LoadScene(1);
     }
     
 }

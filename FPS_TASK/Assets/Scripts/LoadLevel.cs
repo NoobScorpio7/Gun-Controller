@@ -14,18 +14,17 @@ using UnityEngine;
 
         [HideInInspector]
         public GameObject Level;
-        Target target;
+        
 
-        void Start()
-        {
-           
-                
-            
-        }
-        void Update()
-        {
+    private void Start()
+    {
+        
+    }
 
-        }
+    void Update()
+    {
+
+    }
 
 
 

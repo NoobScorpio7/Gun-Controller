@@ -11,15 +11,11 @@ using UnityEngine;
         public int currhealth;
         public Healthbar healthbar;
         public bool isdead = false;
-    public ChangeLevel changeLevel;
-        public bool IsEnemyDead()
-        {
-            return isdead;
-        }
-
+        public ChangeLevel changeLevel;
+        
         public void Start()
         {
-        changeLevel = GetComponent<ChangeLevel>();
+            changeLevel = GetComponent<ChangeLevel>();
             currhealth = maxhealth;
             healthbar.SetMaxHealth(maxhealth);
         }
@@ -31,12 +27,14 @@ using UnityEngine;
             {
                 Die();
             }
+            
         }
+    
 
         public void Die()
         {
             isdead = true;
-        changeLevel.NextLevel();
+            changeLevel.NextLevel();
             Destroy(gameObject);
         }
 

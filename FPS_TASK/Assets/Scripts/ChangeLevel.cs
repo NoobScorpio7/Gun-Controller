@@ -5,37 +5,47 @@ using UnityEngine;
 
 public class ChangeLevel : MonoBehaviour
 {
-    public int currLevel = 0;
+    public int currLevel;
     Target target;
-
     public List<GameObject> levels;
+    public int totalEnemies;
+    
+    
    
     void Start()
     {
         target = transform.GetComponent<Target>();
     }
-
-    // Update is called once per frame
-   /* void Update()
-    {
-        NextLevel();
-        
-    }
-   */
+    
     public void NextLevel()
     {
-        
-        foreach (GameObject enemy in levels)
-        {
+         if (currLevel < levels.Count-1)
+         {
+             currLevel++;
+             print("CURRENT LEVEL: " + currLevel);
+             GameObject enemy = levels[currLevel];
+
+             target.setValues(currLevel, enemy);
+             enemy.SetActive(true);
             
-            if (!target.isdead)
-            {
-                print("enemy spawn");
-                enemy.gameObject.SetActive(true);
-            }
-           
         }
+         else
+         {
+            currLevel = 0;
+             
+           
+         }
+         
     }
+
+   /* public int getTotalEnemies(GameObject enemyCount)
+    {
+        totalEnemies = enemyCount.transform.childCount;
+        return totalEnemies;
+    }*/
+
+
+
 
 
 }

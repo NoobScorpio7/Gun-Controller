@@ -4,22 +4,25 @@ using UnityEngine;
 
 public class LevelManager : MonoBehaviour
 {
-
-    public List<GameObject> levels;
-    // Start is called before the first frame update
+    
+  
     void Start()
     {
         
     }
 
-    // Update is called once per frame
+   
     void Update()
     {
         
     }
 
-    public void ChangeLevel()
+    //todo: make a fucntion that take level index and on that bases it loads level and also when level button is clicked.
+    //ist level should be opened rest of the level should be locked.
+    public void ResumeLevel()
     {
-
+        //TODO: load a game level here
     }
+
+    //todo: make a pla
 }

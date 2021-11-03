@@ -54,7 +54,7 @@ using UnityEngine;
                         if (currObject.name.StartsWith(prefabObjects[i].name))
                         {
                             GameObject newObject = (GameObject)Instantiate(prefabObjects[i],
-                                currObject.transform.position, Quaternion.identity) as GameObject;
+                            currObject.transform.position, Quaternion.identity) as GameObject;
                             newObject.transform.SetParent(Level.transform);
                             newObject.name = prefabObjects[i].name;
                             Destroy(currObject);

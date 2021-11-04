@@ -4,4 +4,4 @@ i have made this as my first job task. since i have passion for games and shooti
 
 important tips:
 
-you should always put that code in update that involves in game intraction and action. 
+you should always put that code in update() method that involves in game intraction and action. 

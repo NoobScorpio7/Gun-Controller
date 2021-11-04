@@ -1443,7 +1443,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &999483732
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2059,7 +2059,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1232936183}
-  - component: {fileID: 1232936182}
   m_Layer: 0
   m_Name: LevelManager
   m_TagString: Untagged
@@ -2067,25 +2066,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1232936182
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1232936181}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c49b3d1d3d3cd7649a37faa30d2e7dcf, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  levels:
-  - {fileID: 1957391688}
-  - {fileID: 1062763124}
-  - {fileID: 1755727892}
-  - {fileID: 561245639}
-  - {fileID: 643451699}
-  - {fileID: 0}
 --- !u!4 &1232936183
 Transform:
   m_ObjectHideFlags: 0
@@ -2118,7 +2098,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1364802168
 RectTransform:
   m_ObjectHideFlags: 0

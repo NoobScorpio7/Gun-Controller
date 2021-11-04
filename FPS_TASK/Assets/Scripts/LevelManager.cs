@@ -1,28 +1,45 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
 
 public class LevelManager : MonoBehaviour
 {
-    
-  
+    public List<GameObject> Levels;
+    public int currLevel=0;
+    public int EnemiesCount;
+    public static LevelManager instance;
+       
     void Start()
     {
-        
+
     }
 
-   
+
     void Update()
     {
         
+        
     }
 
-    //todo: make a fucntion that take level index and on that bases it loads level and also when level button is clicked.
-    //ist level should be opened rest of the level should be locked.
-    public void ResumeLevel()
+    
+    public void NextLevel()
     {
-        //TODO: load a game level here
+        
+       
+        PlayerPrefs.SetInt("level", currLevel);
+        if(currLevel > Levels.Count-1)
+        {
+            currLevel = 0;
+        }
+        else
+        {
+            Levels[currLevel].gameObject.SetActive(true);
+            EnemiesCount = Levels[currLevel].gameObject.transform.childCount;
+            PlayerPrefs.SetInt("enemies", EnemiesCount);
+            currLevel++;
+        }
     }
+   
 
-    //todo: make a pla
 }

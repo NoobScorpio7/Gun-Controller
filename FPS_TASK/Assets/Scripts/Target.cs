@@ -10,17 +10,13 @@ public class Target : MonoBehaviour
     public int currhealth;
     public Healthbar healthbar;
     public bool isdead = false;
-    ChangeLevel changeLevel;
     
-      public int CurrentLevel;
-    public int totalEnemies;
 
     
     public void Start()
     {
-         changeLevel = GetComponent<ChangeLevel>();
+       
          currhealth = maxhealth;
-        
          healthbar.SetMaxHealth(maxhealth);
     }
     public void TakeDamage(int amount)
@@ -30,39 +26,19 @@ public class Target : MonoBehaviour
          if (currhealth <= 0)
          {
                 Die();
-         }
             
+         }      
     }
-    
-
     public void Die()
     {
-        
         isdead = true;
         gameObject.SetActive(false);
-        if(totalEnemies == 0)
-        {
-            changeLevel.NextLevel();
-        }
-        else
-        {
-            totalEnemies--;
-            print(totalEnemies + " enemies");
-        }
-        
-       
     }
 
-    public void setValues(int level, GameObject enemies)
+    public void ChangeLevel()
     {
 
-        CurrentLevel += level;
-        totalEnemies = enemies.transform.childCount;
-        print("TOTAL ENEMIES: " + totalEnemies);
     }
-
-
-
 
 }
 

@@ -16,11 +16,13 @@ public class Fighter : MonoBehaviour
     private void Start()
     {
         audioSource = GetComponent<AudioSource>();
+        
     }
     // Update is called once per frame
     void Update()
     {
         Shoot();
+        
     }
 
     private void Shoot()

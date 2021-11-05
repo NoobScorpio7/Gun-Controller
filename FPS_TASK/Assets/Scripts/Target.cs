@@ -10,6 +10,8 @@ public class Target : MonoBehaviour
     public int currhealth;
     public Healthbar healthbar;
     public bool isdead = false;
+
+    int totalEnemies;
     
 
     
@@ -18,6 +20,12 @@ public class Target : MonoBehaviour
        
          currhealth = maxhealth;
          healthbar.SetMaxHealth(maxhealth);
+    }
+
+
+    public void Update()
+    {
+       
     }
     public void TakeDamage(int amount)
     {
@@ -32,13 +40,11 @@ public class Target : MonoBehaviour
     public void Die()
     {
         isdead = true;
-        gameObject.SetActive(false);
+        Destroy(gameObject);
+       
     }
 
-    public void ChangeLevel()
-    {
-
-    }
+    
 
 }
 

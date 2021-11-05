@@ -8482,7 +8482,8 @@ MonoBehaviour:
   - {fileID: 1188349646}
   - {fileID: 969677934545684639}
   - {fileID: 6762541855417615174}
-  mainMenu: {fileID: 0}
+  currLevel: 0
+  EnemiesCount: 0
 --- !u!4 &1271989116
 Transform:
   m_ObjectHideFlags: 0
@@ -8976,6 +8977,10 @@ PrefabInstance:
     - target: {fileID: 1382883098676751905, guid: c6590400877be004e86acaaf1e6cfbfb, type: 3}
       propertyPath: m_Name
       value: Terrain
+      objectReference: {fileID: 0}
+    - target: {fileID: 1382883098676751905, guid: c6590400877be004e86acaaf1e6cfbfb, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2187399970082362828, guid: c6590400877be004e86acaaf1e6cfbfb, type: 3}
       propertyPath: m_RootOrder

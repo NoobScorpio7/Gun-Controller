@@ -10,7 +10,7 @@ public class Target : MonoBehaviour
     public int currhealth;
     public Healthbar healthbar;
     public bool isdead = false;
-
+    public CameraShaker cameraShake;
     int totalEnemies;
     
 
@@ -34,14 +34,16 @@ public class Target : MonoBehaviour
          if (currhealth <= 0)
          {
                 Die();
+
             
          }      
     }
     public void Die()
     {
         isdead = true;
+        StartCoroutine(cameraShake.Shake(-15f, 4f));
         Destroy(gameObject);
-       
+    
     }
 
     

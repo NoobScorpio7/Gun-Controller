@@ -7,6 +7,7 @@ public class CameraMovement : MonoBehaviour
     public Vector2 turn;
     // Start is called before the first frame update
     public GameObject player;
+    
 
     private void Start()
     {
@@ -14,6 +15,7 @@ public class CameraMovement : MonoBehaviour
     }
     void Update()
     {
+        
         transform.position = player.transform.position;
         Rotation();
     }

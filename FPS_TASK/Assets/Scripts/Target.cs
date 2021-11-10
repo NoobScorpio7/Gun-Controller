@@ -41,7 +41,7 @@ public class Target : MonoBehaviour
     public void Die()
     {
         isdead = true;
-        StartCoroutine(cameraShake.Shake(-15f, 4f));
+        
         Destroy(gameObject);
     
     }
